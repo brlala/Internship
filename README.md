@@ -1,3 +1,4 @@
 # Internship
 
 Folder with all related stuffs done through internship with P&C information taken out
+Mongo DB Query - Backend API written to process over 800k documents for Dashboard statistics under 0.3 seconds. The criteria is to count entries within 3 minutes of the last message as 1 count only.

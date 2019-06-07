@@ -47,7 +47,8 @@ Creating a flowable object
 elements = []
 styles = getSampleStyleSheet()
 styleN = styles["Normal"]
-
+styleB = styles["BodyText"]
+styleB.alignment = TA_LEFT
 # Make heading for each column and start data list
 column_1 = "User Group Name"
 column_2 = "Access Right"
@@ -55,7 +56,8 @@ column_2 = "Access Right"
 # Assemble data for each column using simple loop to append it into data list
 data = [[column_1, column_2]]
 
-permission_data = (('Admin', 'READ Dashboard\nREAD FAQ\nREAD Flow\nREAD Conversation\nREAD Permissions'),
+description = Paragraph('This is a very long paragraph and should be automatically wrapped around based on the size/width of the cell', styleB)
+permission_data = (('Admin', description),
                    ('ID management', 'READ Portal_users'))
 for i in range(len(permission_data)):
     user_group, access_rights = permission_data[i]
